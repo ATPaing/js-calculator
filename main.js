@@ -1,3 +1,4 @@
+const allBtns = document.querySelectorAll('.btn')
 const numberInputEl = document.getElementById("number-input-el")
 const numberBtnEl = document.querySelectorAll(".number-btn")
 const operatorBtnEl = document.querySelectorAll(".operator-btn")
@@ -51,8 +52,7 @@ operatorBtnEl.forEach((op,i) => {
     deleted = false
     restarted = false
     clicked = true
-
-    
+  
     if(i === 0){
       divideClicked = true
       multiplyClicked = false
@@ -98,13 +98,22 @@ clearBtnEl.addEventListener('click',() => {
   operatorShow.textContent = ''
 })
 
-assignBtnEl.addEventListener('click', () => {
 
+assignBtnEl.addEventListener('click', () => {
   clicked = true
   deleted = false
   restarted = false
   numbers.push(parseFloat(numberInputEl.value))
   calculateResult()
+})
+
+allBtns.forEach(btn => {
+  btn.addEventListener('mousedown', () => {
+    btn.style.transform = 'scale(0.8)'
+  })
+  btn.addEventListener('mouseup', () => {
+    btn.style.transform = 'scale(1)'
+  })
 })
 
 function calculateResult(){
