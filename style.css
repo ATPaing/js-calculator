@@ -9,7 +9,6 @@ body{
   justify-content: center;
   align-items: center;
   background-color: lightblue;
-  perspective: 300px;
 }
 .calculator{
   display: grid;
@@ -32,7 +31,7 @@ body{
   padding-block: 1.6em;
   padding-inline: 2em;
   border-radius: 15px;
-  transform: translateZ(60px);
+  transform: scale(1.5);
   box-shadow:
   8px 8px 20px 0 rgba(0, 0, 0,.6),
   -8px -8px 20px 0 rgba(255, 255, 255,.6),
