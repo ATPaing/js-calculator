@@ -9,11 +9,12 @@ body{
   justify-content: center;
   align-items: center;
   background-color: lightblue;
+  /* perspective: 300px; */
 }
 .calculator{
   display: grid;
-  grid-template-columns: repeat(4,2.23em);
-  grid-template-rows: 2.75em repeat(5,2em);
+  grid-template-columns: repeat(4,70px);
+  grid-template-rows: 2.75em repeat(5,50px);
   grid-template-areas:
    "dis dis dis dis"
    "Delete Divide Multiply Minus"
@@ -22,7 +23,7 @@ body{
    "One Two Three Equal"
    "Clear Zero Dot Equal"
   ;
-  gap: 1.5em;
+  gap: 1.8em;
   background-image: linear-gradient(
     120deg,
     hsl(280 60% 88% ),
@@ -31,18 +32,19 @@ body{
   padding-block: 1.6em;
   padding-inline: 2em;
   border-radius: 15px;
-  transform: scale(1.5);
+  /* transform: scale(1.5); */
   box-shadow:
   8px 8px 20px 0 rgba(0, 0, 0,.6),
   -8px -8px 20px 0 rgba(255, 255, 255,.6),
   inset 5px 5px 25px 0 rgba(0, 0, 0, 0.5),
   inset -7px -7px 15px 0 rgba(255, 255, 255, 0.5);
- overflow: hidden;
+  overflow: hidden;
 }
 .display{
   position: relative;
   background-color: #EFF9F4;
   border-radius: 5px;
+  height: 55px;
 }
 .number-input{
   border: none;
@@ -57,6 +59,7 @@ body{
   inset -2px -2px 2px 0 rgba(255, 255, 255, 0.4);
   letter-spacing: 1.3px;
   font-size: 1.3rem;
+  padding: 0.7em;
 }
 .history{
   position: absolute;
@@ -74,6 +77,9 @@ body{
 }
 .number-input:hover{
   cursor: context-menu;
+}
+.btn{
+  font-size: 1.2rem;
 }
 .calculator__btn{
   border-radius: 8px;
